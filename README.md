@@ -19,9 +19,10 @@ composer install
 
 ### NPM
 
-Il faut la version v8.6.0 de nodejs et 5.3 de npm.
+Il faut au minimum la version v8.6.0 de nodejs et 5.3 de npm.
+* Node : version recommandé 8.X : [voir le site officiel pour l'installation via votre gestionnaire de paquet](https://nodejs.org/en/download/package-manager/)
 
-Pour installer les dépendances web :
+Pour installer les dépendances javascript :
 ```
 npm install
 ```
@@ -48,6 +49,11 @@ php app/console doctrine:database:create
 Pour créer le schéma de la base de données :
 ```
 php app/console doctrine:schema:create
+```
+
+Pour charger les fixtures (pour le développement)
+```
+php app/console doctrine:fixtures:load
 ```
 
 Pour mettre à jour le schéma de la base de données :
@@ -113,8 +119,8 @@ cap prod deploy
 
 Se connecter en ssh sur le serveur, aller dans le dossier du projet puis current/ pour avoir la version courante.
 Exécuter les lignes de commande pour créer le schéma de la base de données et charger les fixtures.
- * php app/console doctrine:schema:create
- * php app/console doctrine:fixtures:load
+ * `php app/console doctrine:schema:create`
+ * `php app/console doctrine:fixtures:load`
 
 ## Explication du projet
 
